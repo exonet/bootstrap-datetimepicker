@@ -22,7 +22,7 @@
 
 /*
  * Improvement by CuGBabyBeaR @ 2013-09-12
- * 
+ *
  * Make it work in bootstrap v3
  */
 
@@ -275,6 +275,9 @@
 		},
 
 		show: function (e) {
+			if (this.isVisible) {
+				return this.hide();
+			}
 			this.picker.show();
 			this.height = this.component ? this.component.outerHeight() : this.element.outerHeight();
 			if (this.forceParse) {
